@@ -13,15 +13,19 @@ This game is about to select the correct ingredients to make the expected recipe
 Minimum user stories:
 
 - When User click on START button will emerge a Recipe Page (this page emerge for 10 seconds).
-- The Recipe Page has a ingredients list and their quantities that contains the Recipe.
-- The User have to memorice that ingredients list.
-- Well selected ingredients increase the Ingredient score (quantity of single ingredient).
-- If the User pick a ingredient that is not in the recipe, decrease the total SCORE.
-- Initial Score is 3, if it decrease to 0, User lose.
+- User will move left and right a pot to select 3 ingredients falling down to win
+- If user pick a wrong ingredient, user lose.
+
 
 ## User stories Backlog
 
+
+- The Recipe Page has a ingredients list and their quantities that contains the Recipe.
+- The User have to memorice that ingredients list.
+- Well selected ingredients increase the Ingredient score (quantity of single ingredient).
 - User can move the POT left and right to pick the ingredients falling down.
+- If the User pick a ingredient that is not in the recipe, decrease the total SCORE.
+- Initial Score is 3, if it decrease to 0, User lose.
 
 ## File structure
 
