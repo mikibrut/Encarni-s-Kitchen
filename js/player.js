@@ -1,4 +1,4 @@
-Class Player {
+class Player {
     constructor (x, y, width, height){
         this.image = pot;
         this.x = x;

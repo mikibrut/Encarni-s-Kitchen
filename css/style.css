@@ -1,6 +1,11 @@
 * {
+ 
   margin: 0;
   padding: 0;
+}
+
+#body {
+  background-image: url(/img/floral-vines-lyvd-l.jpg);
 }
 
 /* Basic styles, change according to your style */
