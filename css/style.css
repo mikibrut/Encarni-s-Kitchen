@@ -6,6 +6,7 @@
 /* Basic styles, change according to your style */
 
 #start-page,
+#start-page-recipe,
 #lose-page {
   height: 600px;
   width: 1000px;
@@ -18,6 +19,12 @@
   border: 1px solid black;
   margin-top: 30px;
 }
+
+#start-page {
+  background-image: url(/img/oldLady\ TEXT2.jpg);
+  text-align: center;
+}
+
 
 #lose-page {
   display: none;
