@@ -17,4 +17,18 @@ class Ingredient{
           this.y = this.y + 1;
         }, 10) 
        }
+
+    _assignRole(){
+        if(Math.floor(Math.random() * 5) > 1){
+            this.role = "wrongIngredient"
+        } else {
+            this.role = "goodIngredient"
+        }
+    }
+
+    _assignImage(){
+        if(this.role === "wrongIngredient"){
+            this.image = wrongImages[Math.floor(Math.random() * wrongImages.length)]
+        } else {this.image = goodImages[Math.floor(Math.random() * goodImages.length)]}
+    }
 }
