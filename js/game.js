@@ -2,13 +2,30 @@ class Game{
   constructor(context) {
     this.ctx = context;
     this.pot = new Player(500, 400, 100, 100);
-    this.ingredient = new Ingredient
+    this.ingredients = [];
     this.points = 3;
     }
 
+
+  _generateIngredients(){
+    setInterval(() => {
+    const newIngredient = new Ingredient();
+    newIngredient._assignRole();
+    newIngredient._assignImage();
+    newIngredient._fallingDown();
+    this.ingredients.push(newIngredient);
+    }, 1000);
+  };
+
+  _drawIngredients(){
+    this.ingredients.forEach((elem) => {
+      this.ctx.drawImage(elem.image, elem.x, elem.y, elem.width, elem.height);
+    });
+  };
+
   _drawPot(){
-    this.ctx.drawImage(this.pot.image, this.pot.x, this.pot.y, this.pot.width, this.pot.height )
-  }
+    this.ctx.drawImage(this.pot.image, this.pot.x, this.pot.y, this.pot.width, this.pot.height);
+  };
 
   _clean(){
     this.ctx.clearRect(0, 0, 1000, 600);
@@ -17,18 +34,19 @@ class Game{
   _update(){
     this._clean();
     this._drawPot();
-    window.requestAnimationFrame(() => this._update())
+    this._drawIngredients();
+    window.requestAnimationFrame(() => this._update());
   }
 
   _assignControls() {
-    // Controles del teclado
+    
     document.addEventListener('keydown', (event) => {
       switch (event.code) {
         case 'ArrowLeft':
-          this.meatball.moveLeft();
+          this.pot.moveLeft();
           break;
         case 'ArrowRight':
-          this.meatball.moveRight();
+          this.pot.moveRight();
           break;
         default:
           break;
@@ -40,5 +58,6 @@ class Game{
   start() {
     this._assignControls();
     this._update();
+    this._generateIngredients();
   }
 }
