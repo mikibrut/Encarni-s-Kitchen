@@ -28,17 +28,6 @@ class Game{
     this.ctx.drawImage(this.pot.image, this.pot.x, this.pot.y, this.pot.width, this.pot.height);
   };
 
-  _clean(){
-    this.ctx.clearRect(0, 0, 1000, 600);
-  }
-
-  _update(){
-    this._clean();
-    this._drawPot();
-    this._drawIngredients();
-    window.requestAnimationFrame(() => this._update());
-  }
-
   _assignControls() {
     
     document.addEventListener('keydown', (event) => {
@@ -55,10 +44,52 @@ class Game{
     });
   }
 
- 
+  _checkCollisions(){
+    console.log('Collision! Points: ', this.points);
+    this.ingredients.forEach((ingredient) => {
+      if (
+        (
+          // Compruebo si mi pot está dentro de la X + width del ingredient
+          this.pot.x >= ingredient.x && this.pot.x <= ingredient.x + ingredient.width ||
+          this.pot.x + this.pot.width >= ingredient.x && this.pot.x + this.pot.width <= ingredient.x + ingredient.width ||
+          // Incluso si mi pot es más grande que el ingredient
+          ingredient.x >= this.pot.x && ingredient.x <= this.pot.x + this.pot.width
+        ) &&
+        (
+          // Lo mismo con el eje Y
+          this.pot.y >= ingredient.y && this.pot.y <= ingredient.y + ingredient.height ||
+          this.pot.y + this.pot.height >= ingredient.y && this.pot.y + this.pot.height <= ingredient.y + ingredient.height ||
+          ingredient.y >= this.pot.y && ingredient.y <= this.pot.y + this.pot.height
+        )
+      ) {
+        if (ingredient.role === 'goodIngredient') {
+          this.points++;
+        } else if (ingredient.role === 'wrongIngredient') {
+          this.points--;
+        }
+        
+        let index = this.ingredients.indexOf(ingredient);
+        this.ingredients.splice(index, 1);
+      }
+    })
+  }
+
+  _clean(){
+    this.ctx.clearRect(0, 0, 1000, 600);
+  }
+
+  _update(){
+    this._clean();
+    this._drawPot();
+    this._drawIngredients();
+    this._checkCollisions();
+    window.requestAnimationFrame(() => this._update());
+  }
+
   start() {
     this._assignControls();
     this._update();
     this._generateIngredients();
+    
   }
 }

@@ -9,6 +9,7 @@ window.onload = function () {
   startButton.onclick = function () {
     startPage.style = "display: none";
     startPageRecipe.classList.remove('hidden');
+    startPageRecipe.style = "display: flex"
   }
 
 
