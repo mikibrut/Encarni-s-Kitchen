@@ -8,13 +8,15 @@ pot.src = './img/pot.png'
 
 //Wrong Ingredients//
 
-const wrongImages = [];
 
 const apple = new Image();
 apple.src = './img/apple.png'
 
 const apricot = new Image();
 apricot.src = './img/apricot.png'
+
+const bean = new Image();
+bean.src = './img/bean.png';
 
 const beer = new Image();
 beer.src = './img/beer.png'
@@ -91,7 +93,7 @@ parsnip.src = './img/parsnip.png';
 const peach = new Image();
 peach.src = './img/peach.png';
 
-const peat = new Image();
+const pear = new Image();
 pear.src = './img/pear.png';
 
 const pumpkin = new Image();
@@ -118,12 +120,12 @@ yellowPepper.src = './img/yellowPepper.png';
 const zucchini = new Image();
 zucchini.src = './img/zucchini.png';
 
+const wrongImages = [apple, apricot, bean, beer, berries, blueberry, brocoli, cherry, coliflower, cucumber, curri, eggplant, greenBean, honey, honey2, icon5, icon6, icon17, icon28, icon36, icon47, icon48, lemon, lettuce, nut, orange, parsnip, peach, pear, pumpkin, radish, springGarlic, turnip, water, watermelon, yellowPepper, zucchini];
+
+
 //Good Ingredients//
 
-const goodImages = [];
 
-const bean = new Image();
-bean.src = './img/bean.png';
 
 const broth = new Image();
 broth.src = './img/broth.png';
@@ -150,10 +152,12 @@ const potato = new Image();
 potato.src = './img/potato.png';
 
 const redWine = new Image();
-redWine = './img/redWine.png';
+redWine.src = './img/redWine.png';
 
 const salt = new Image();
 salt.src = './img/salt.png';
 
 const tomato = new Image();
 tomato.src = './img/tomato.png';
+
+const goodImages = [broth, carrot, chili, garlic, greenPepper, lentils, oliveOil, potato, redWine, salt, tomato];

@@ -5,7 +5,9 @@
 }
 
 #body {
-  background-image: url(/img/floral-vines-lyvd-l.jpg);
+  font-family: 'Press Start 2P', cursive;
+  background-image: url(/img/funkyWallpaper.jpg);
+  
 }
 
 /* Basic styles, change according to your style */
@@ -21,13 +23,30 @@
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
-  border: 1px solid black;
+  border: 5px solid rgb(255,162,63);
+  border-radius: 25px;
   margin-top: 30px;
 }
 
 #start-page {
   background-image: url(/img/oldLady\ TEXT2.jpg);
+  background-size: cover;
   text-align: center;
+}
+
+#instructions{
+  color: white;
+  background-color: rgb(255,162,63);
+  border: 5px solid white;
+  border-radius: 25px;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 350px;
+  margin-right: 75px;
+  margin-left: 75px;
+  
+
 }
 
 
@@ -36,7 +55,10 @@
 }
 
 canvas {
-  border: 1px solid black;
+  border: 5px solid rgb(255,162,63);
+  background-color: rgb(255,252,166);
+  border-radius: 25px;
+  opacity: 0.95;
   display: block;
   margin: 0 auto;
   margin-top: 30px;

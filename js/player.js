@@ -16,7 +16,7 @@ class Player {
 
     moveLeft(){
         this.x = this.x - 15;
-        if (this.x - this.width < 0){
+        if (this.x - this.width < -120){
             this.x = 1000;
         }
     }

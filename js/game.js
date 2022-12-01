@@ -1,14 +1,15 @@
 class Game{
   constructor(context) {
     this.ctx = context;
-    this.pot = new Player(500, 400, 100, 100);
+    this.pot = new Player(500, 480, 100, 100);
     this.ingredients = [];
     this.points = 3;
+    this.generateInterval = null;
     }
 
 
   _generateIngredients(){
-    setInterval(() => {
+    this.generateInterval = setInterval(() => {
     const newIngredient = new Ingredient();
     newIngredient._assignRole();
     newIngredient._assignImage();
