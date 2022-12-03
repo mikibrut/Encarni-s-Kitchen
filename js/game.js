@@ -49,14 +49,12 @@ class Game{
     this.ingredients.forEach((ingredient) => {
       if (
         (
-          // Compruebo si mi pot está dentro de la X + width del ingredient
           this.pot.x >= ingredient.x && this.pot.x <= ingredient.x + ingredient.width ||
           this.pot.x + this.pot.width >= ingredient.x && this.pot.x + this.pot.width <= ingredient.x + ingredient.width ||
           // Incluso si mi pot es más grande que el ingredient
           ingredient.x >= this.pot.x && ingredient.x <= this.pot.x + this.pot.width
         ) &&
         (
-          // Lo mismo con el eje Y
           this.pot.y >= ingredient.y && this.pot.y <= ingredient.y + ingredient.height ||
           this.pot.y + this.pot.height >= ingredient.y && this.pot.y + this.pot.height <= ingredient.y + ingredient.height ||
           ingredient.y >= this.pot.y && ingredient.y <= this.pot.y + this.pot.height
@@ -67,11 +65,22 @@ class Game{
         } else if (ingredient.role === 'wrongIngredient') {
           this.points--;
         }
-        
+        if(this.points < 0){
+          this._gameOver();
+        }
+
         let index = this.ingredients.indexOf(ingredient);
         this.ingredients.splice(index, 1);
       }
     })
+  }
+
+  _gameOver(){
+    clearInterval(this.generateInterval);
+    const losePage = document.getElementById('lose-page');
+    losePage.style = "display: flex";
+    const canvas = document.getElementById('canvas');
+    canvas.style = "display: none";
   }
 
   _clean(){

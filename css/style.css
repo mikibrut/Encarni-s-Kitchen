@@ -67,6 +67,16 @@
   padding: 20px;
 }
 
+#start:hover{
+  font-family: 'Press Start 2P', cursive;
+  color: rgb(255,162,63);
+  font-size: 50px;
+  background-color: white;
+  border: 5px solid rgb(255,162,63);
+  border-radius: 25px;
+  padding: 20px;
+}
+
 .start-game-button{
   font-family: 'Press Start 2P', cursive;
   color: white;
@@ -77,9 +87,44 @@
   padding: 20px;
 }
 
+.start-game-button:hover{
+  font-family: 'Press Start 2P', cursive;
+  color: rgb(255,162,63);
+  font-size: 50px;
+  background-color: white;
+  border: 5px solid rgb(255,162,63);
+  border-radius: 25px;
+  padding: 20px;
+}
+
 #lose-page {
   display: none;
 }
+
+#loser{
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-bottom: 0%;
+    width: 300%
+  }
+
+  to {
+    margin-top: 0%;
+    width: 100%;
+  }
+
+  75% {
+    font-size: 300%;
+    ;
+    width: 150%;
+  }
+}
+
+
 
 canvas {
   border: 5px solid rgb(255,162,63);

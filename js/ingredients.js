@@ -14,7 +14,7 @@ class Ingredient{
             if(this.y > 600){
                 clearInterval(this.fallInterval)
             }
-          this.y = this.y + 2.5;
+          this.y = this.y + 3;
         }, 10) 
        }
 
