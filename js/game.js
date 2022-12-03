@@ -3,7 +3,7 @@ class Game{
     this.ctx = context;
     this.pot = new Player(500, 480, 100, 100);
     this.ingredients = [];
-    this.points = 3;
+    this.points = 0;
     this.generateInterval = null;
     }
 
@@ -51,7 +51,6 @@ class Game{
         (
           this.pot.x >= ingredient.x && this.pot.x <= ingredient.x + ingredient.width ||
           this.pot.x + this.pot.width >= ingredient.x && this.pot.x + this.pot.width <= ingredient.x + ingredient.width ||
-          // Incluso si mi pot es más grande que el ingredient
           ingredient.x >= this.pot.x && ingredient.x <= this.pot.x + this.pot.width
         ) &&
         (
@@ -75,6 +74,12 @@ class Game{
     })
   }
 
+  _writeScore() {
+    this.ctx.fillStyle = "black";
+    this.ctx.font = "25px 'Press Start 2P'";
+    this.ctx.fillText(`Cooking Skills: ${this.points}`, 100, 100);
+  }
+
   _gameOver(){
     clearInterval(this.generateInterval);
     const losePage = document.getElementById('lose-page');
@@ -92,6 +97,7 @@ class Game{
     this._drawPot();
     this._drawIngredients();
     this._checkCollisions();
+    this._writeScore();
     window.requestAnimationFrame(() => this._update());
   }
 

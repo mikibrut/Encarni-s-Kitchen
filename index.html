@@ -24,8 +24,26 @@
 
   <div id="start-page-recipe" class="hidden" style="display: none;">
     <main>
-      <h1>Recipe</h1>
-      <p id="recipeInst">Ingredients/Quantity</p>
+      
+      <p id="recipeInst">Remember THIS ingredients</p>
+      <div class="flex-container" id = "ingredient-list">
+        <ul class="flex-child">
+          <li> <img src="./img/oliveOil.png">Olive Oil</li>
+          <li> <img src="./img/garlic.png">Garlic</li>
+          <li> <img src="./img/greenPepper.png">Green Pepper</li>
+          <li> <img src="./img/carrot.png">Carrot</li>
+          <li> <img src="./img/tomato.png">Tomato</li>
+          <li> <img src="./img/chili.png">Chili</li>
+          </ul>
+          <ul  class="flex-child">
+          <li> <img src="./img/potato.png">Potatoes</li>
+          <li> <img src="./img/redWine.png">Red Wine</li>
+          <li> <img src="./img/lentils.png">Lentils</li>
+          <li> <img src="./img/broth.png">Broth</li>
+          <li> <img src="./img/salt.png">Salt</li>
+        </ul>
+        <div  class="flex-child" id="instruction-recipe" >Other ingredients will ruin your dish, chef!</div>
+      </div>
       <button id="start-game" class="start-game-button">START</button>
     </main>
   </div>
@@ -35,6 +53,7 @@
     <div id="lose-page">
     <main>
       <h1 id ='loser'>YOU LOSE SUCKER</h1>
+      <button id="try-again" class="start-game-button">TRY AGAIN</button>
     </main>
   </div>
 

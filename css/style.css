@@ -45,16 +45,32 @@
   margin-right: 75px;
   margin-left: 75px;
 }
+#recipe{
+  color: white;
+  margin-top: 100px;
+
+}
 
 #recipeInst{
   color: white;
   background-color: rgb(255,162,63);
   border: 5px solid white;
+  border-radius: 22px;
+  padding: 15px;
+  }
+
+#ingredient-list{
+  color: white;
+  line-height : 25px;
+  background-color: rgb(255,162,63);
+  border: 5px solid white;
   border-radius: 25px;
-  padding: 25px ;
-  margin-bottom: 350px;
-  margin-right: 75px;
-  margin-left: 75px;
+  padding: 15px;
+}
+
+li{
+  list-style: none;
+  text-align: left;
 }
 
 #start{
@@ -80,21 +96,22 @@
 .start-game-button{
   font-family: 'Press Start 2P', cursive;
   color: white;
-  font-size: 50px;
+  font-size: 25px;
   background-color: rgb(255,162,63);
   border: 5px solid white;
   border-radius: 25px;
   padding: 20px;
+  margin-bottom: 10px;
 }
 
 .start-game-button:hover{
   font-family: 'Press Start 2P', cursive;
   color: rgb(255,162,63);
-  font-size: 50px;
+  font-size: 25px;
   background-color: white;
   border: 5px solid rgb(255,162,63);
   border-radius: 25px;
-  padding: 20px;
+  
 }
 
 #lose-page {
@@ -102,6 +119,8 @@
 }
 
 #loser{
+  color: white;
+  font-size: 50px;
   animation-duration: 3s;
   animation-name: slidein;
 }
@@ -145,4 +164,21 @@ canvas {
 
 .shown {
   display: flex;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 40px;
+}
+
+.flex-child {
+  width: 30%;
+  padding-top: 10px;
+}
+
+#instruction-recipe{
+  padding-top: 60px;
 }

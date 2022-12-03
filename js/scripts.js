@@ -5,6 +5,7 @@ window.onload = function () {
   const startPageRecipe = document.getElementById('start-page-recipe');
   const startButton = document.getElementById('start');
   const startGameButton = document.getElementById('start-game');
+  const tryAgainButton = document.getElementById('try-again')
   
   startButton.onclick = function () {
     startPage.style = "display: none";
@@ -19,4 +20,8 @@ startGameButton.onclick = function () {
   const game = new Game(ctx);
   game.start();
 }
+
+tryAgainButton.onclick = function () {
+  window.location.reload();
+};
 }
