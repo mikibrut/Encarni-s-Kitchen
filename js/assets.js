@@ -1,7 +1,7 @@
 // POT //
 
 const pot = new Image();
-pot.src = './img/pot.png'
+pot.src = './img/pot.png';
 
 
 // INGREDIENTS // 
@@ -10,43 +10,43 @@ pot.src = './img/pot.png'
 
 
 const apple = new Image();
-apple.src = './img/apple.png'
+apple.src = './img/apple.png';
 
 const apricot = new Image();
-apricot.src = './img/apricot.png'
+apricot.src = './img/apricot.png';
 
 const bean = new Image();
 bean.src = './img/bean.png';
 
 const beer = new Image();
-beer.src = './img/beer.png'
+beer.src = './img/beer.png';
 
 const berries = new Image();
-berries.src = './img/berries.png'
+berries.src = './img/berries.png';
 
 const blueberry = new Image();
-blueberry.src = './img/blueberry.png'
+blueberry.src = './img/blueberry.png';
 
 const brocoli = new Image();
-brocoli.src = './img/brocoli.png'
+brocoli.src = './img/brocoli.png';
 
 const cherry = new Image();
-cherry.src = './img/cherry.png'
+cherry.src = './img/cherry.png';
 
 const coliflower = new Image();
-coliflower.src = './img/coliflower.png'
+coliflower.src = './img/coliflower.png';
 
 const cucumber = new Image();
-cucumber.src = './img/cucumber.png'
+cucumber.src = './img/cucumber.png';
 
 const curri = new Image();
-curri.src = './img/curri.png'
+curri.src = './img/curri.png';
 
 const eggplant = new Image();
-eggplant.src = './img/eggplant.png'
+eggplant.src = './img/eggplant.png';
 
 const greenBean = new Image();
-greenBean.src = './img/greenBean.png'
+greenBean.src = './img/greenBean.png';
 
 const honey = new Image();
 honey.src = './img/honey.png';
@@ -161,3 +161,23 @@ const tomato = new Image();
 tomato.src = './img/tomato.png';
 
 const goodImages = [broth, carrot, chili, garlic, greenPepper, lentils, oliveOil, potato, redWine, salt, tomato];
+
+// SOUND //
+
+
+function sound(src) { 
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function() {
+      this.sound.play();
+    };
+    this.stop = function() {
+      this.sound.pause();
+    };
+  }
+
+  const gameSong = new sound('./audio/cociditoLow.mp3');

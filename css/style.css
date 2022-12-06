@@ -4,13 +4,15 @@
   padding: 0;
 }
 
+/* BACKGROUND */
+
 #body {
   font-family: 'Press Start 2P', cursive;
   background-image: url(/img/funkyWallpaper.jpg);
   
 }
 
-/* Basic styles, change according to your style */
+/* PAGES */
 
 #start-page,
 #start-page-recipe,
@@ -118,6 +120,13 @@ li{
   display: none;
 }
 
+#win-page {
+  display: none;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 0;
+}
+
 #loser{
   color: white;
   font-size: 50px;
@@ -125,14 +134,27 @@ li{
   animation-name: slidein;
 }
 
+#winer{
+  color: white;
+  font-size: 25px;
+  animation-duration: 3s;
+  margin-top: 300px;
+  animation-name: slidein;
+}
+
+#grandpa{
+  margin-bottom: 500px;
+  margin-left: 200px;
+}
+
 @keyframes slidein {
   from {
-    margin-bottom: 0%;
+    
     width: 300%
   }
 
   to {
-    margin-top: 0%;
+   
     width: 100%;
   }
 
@@ -142,8 +164,6 @@ li{
     width: 150%;
   }
 }
-
-
 
 canvas {
   border: 5px solid rgb(255,162,63);

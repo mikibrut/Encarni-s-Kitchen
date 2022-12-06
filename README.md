@@ -13,8 +13,10 @@ This game is about to select the correct ingredients to make the expected recipe
 Minimum user stories:
 
 - When User click on START button will emerge a Recipe Page (this page emerge for 10 seconds).
+- User will remember the ingredients of the Recipe.
 - User will move left and right a pot to select 3 ingredients falling down to win
 - If user pick a wrong ingredient, user lose.
+- If user pick 10 of the correct ingredients, user win.
 
 
 ## User stories Backlog

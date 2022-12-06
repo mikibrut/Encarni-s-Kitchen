@@ -12,26 +12,26 @@ class Ingredient{
     _fallingDown(){
         this.fallInterval = setInterval(() => {
             if(this.y > 600){
-                clearInterval(this.fallInterval)
+                clearInterval(this.fallInterval);
             }
           this.y = this.y + 3;
-        }, 10) 
-       }
+        }, 10) ;
+       };
 
     _assignRole(){
         if(Math.floor(Math.random() * 9) > 1){
-            this.role = "wrongIngredient"
+            this.role = "wrongIngredient";
         } else {
-            this.role = "goodIngredient"
+            this.role = "goodIngredient";
         }
     }
 
     _assignImage(){
         if(this.role === "wrongIngredient"){
-            this.image = wrongImages[Math.floor(Math.random() * wrongImages.length)]
+            this.image = wrongImages[Math.floor(Math.random() * wrongImages.length)];
         } 
         if(this.role === "goodIngredient"){
-            this.image = goodImages[Math.floor(Math.random() * goodImages.length)]
-        }
-    }
-}
+            this.image = goodImages[Math.floor(Math.random() * goodImages.length)];
+        };
+    };
+};

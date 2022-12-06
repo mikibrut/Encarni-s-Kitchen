@@ -5,6 +5,7 @@ class Game{
     this.ingredients = [];
     this.points = 0;
     this.generateInterval = null;
+    this.song = gameSong;
     }
 
 
@@ -67,6 +68,9 @@ class Game{
         if(this.points < 0){
           this._gameOver();
         }
+        if(this.points > 9){
+          this._winer();
+        }
 
         let index = this.ingredients.indexOf(ingredient);
         this.ingredients.splice(index, 1);
@@ -86,6 +90,16 @@ class Game{
     losePage.style = "display: flex";
     const canvas = document.getElementById('canvas');
     canvas.style = "display: none";
+    this.song.stop();
+  }
+
+  _winer(){
+    clearInterval(this.generateInterval);
+    const winerPage = document.getElementById('win-page');
+    winerPage.style = "display: flex";
+    const canvas = document.getElementById('canvas');
+    canvas.style = "display: none";
+    this.song.stop();
   }
 
   _clean(){
@@ -105,6 +119,6 @@ class Game{
     this._assignControls();
     this._update();
     this._generateIngredients();
-    
+    this.song.play();
   }
 }
