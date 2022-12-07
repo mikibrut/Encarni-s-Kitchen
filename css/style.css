@@ -8,7 +8,7 @@
 
 #body {
   font-family: 'Press Start 2P', cursive;
-  background-image: url(/img/funkyWallpaper.jpg);
+  background-image: url('/img/funkyWallpaper.jpg');
   
 }
 
@@ -31,7 +31,7 @@
 }
 
 #start-page {
-  background-image: url(/img/oldLady\ TEXT2.jpg);
+  background-image: url('/img/oldLady\ TEXT2.jpg');
   background-size: cover;
   text-align: center;
 }
