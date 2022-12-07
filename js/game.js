@@ -46,8 +46,7 @@ class Game{
   }
 
   _checkCollisions(){
-    console.log('Collision! Points: ', this.points);
-    this.ingredients.forEach((ingredient) => {
+      this.ingredients.forEach((ingredient) => {
       if (
         (
           this.pot.x >= ingredient.x && this.pot.x <= ingredient.x + ingredient.width ||
