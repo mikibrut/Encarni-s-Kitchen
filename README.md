@@ -6,17 +6,17 @@
 
 ## Description
 
-This game is about to select the correct ingredients to make the expected recipe moving a POT left and right.
+This game is about to select the correct ingredients to make the expected recipe moving a POT.
 
 ## User stories MVP
 
-Minimum user stories:
 
-- When User click on START button will emerge a Recipe Page (this page emerge for 10 seconds).
-- User will remember the ingredients of the Recipe.
-- User will move left and right a pot to select 3 ingredients falling down to win
-- If user pick a wrong ingredient, user lose.
-- If user pick 10 of the correct ingredients, user win.
+- When User click on START button will emerge a Recipe Page.
+- User will remember the correct ingredients of the Recipe.
+- User will move left and right a pot to select 10 correct ingredients falling down to win.
+- If user pick a wrong ingredient, user lose one point.
+- If user points are 0, user lose.
+- If user points are 10, user win.
 
 
 ## User stories Backlog
@@ -25,9 +25,8 @@ Minimum user stories:
 - The Recipe Page has a ingredients list and their quantities that contains the Recipe.
 - The User have to memorice that ingredients list.
 - Well selected ingredients increase the Ingredient score (quantity of single ingredient).
-- User can move the POT left and right to pick the ingredients falling down.
-- If the User pick a ingredient that is not in the recipe, decrease the total SCORE.
-- Initial Score is 3, if it decrease to 0, User lose.
+- the POT generates good or bad smell (smoke over the pot in diferent colors).
+
 
 ## File structure
 
