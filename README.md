@@ -2,7 +2,7 @@
 
 
 <!-- When you finish, add a nice screenshot of your game -->
-[<img src="/img/portada.jpg">]()
+[<img src="/img/portada2.jpg">]()
 
 ## Description
 
