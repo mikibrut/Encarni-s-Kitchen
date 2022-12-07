@@ -39,4 +39,4 @@ Minimum user stories:
 <!-- When you finish, add these links and commit -->
 
 - [Presentation slides]()
-- [Deployed game]()
+- https://mikibrut.github.io/Encarni-s-Kitchen/
