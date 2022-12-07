@@ -2,11 +2,11 @@
 
 
 <!-- When you finish, add a nice screenshot of your game -->
-<!--[<img src="./img/page.png">]()-->
+[<img src='./img/portada.jpeg'>]()
 
 ## Description
 
-This game is about to select the correct ingredients to make the expected recipe moving a pot left and right.
+This game is about to select the correct ingredients to make the expected recipe moving a POT left and right.
 
 ## User stories MVP
 
@@ -31,12 +31,19 @@ Minimum user stories:
 
 ## File structure
 
-- <code>game.js</code>: contains all the elements for the game to work. Methods: start(), \_update()
-- <code>scripts.js</code>: contains all the DOM manipulation code to start the game
+- <code>assets.js</code>: contains all the media elements for the game.
+- <code>game.js</code>: contains all the elements for the game to work and the game master methods. 
+- <code>ingredients.js</code>: class Ingredients and his methods.
+- <code>player.js</code>: class Player and his methods.
+- <code>scripts.js</code>: contains all the DOM manipulation code to start the game.
+- <code>index.html</code>: html structure of the game page.
+- <code>style.css</code>: design and web aestethics.
+- <code>img folder</code>: images files involved (jpeg and png).
+- <code>audio folder</code>: audio files involved (mp3).
 
 ## Useful links
 
 <!-- When you finish, add these links and commit -->
 
-- [Presentation slides]()
-- [Deployed game]()
+- [Presentation slides](https://docs.google.com/presentation/d/1Tu3gWYYkB9Yxx6fZGQkze94Wwbicu_ZliP-plGan27M/edit#slide=id.p)
+- [Deployed game](https://mikibrut.github.io/Encarni-s-Kitchen/)
